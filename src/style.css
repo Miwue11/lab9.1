@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-image: url("https://img.freepik.com/vector-gratis/vector-fondo-decorativo-textura-acuarela-verde-suave_1055-18436.jpg?semt=ais_hybrid");
+  background-size: cover;
+  font-family: "montserrat", sans-serif;
+  max-width: 100%;
+  max-height: 50%;
+  text-align: center;
+  background-color: #1e0f0f40;
+  font-style: italic;
+}
+
+#puntuacion {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #1d5203ce;
+  font-weight: bold;
+}
+
+img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+button:active {
+  background-color: #36bd04b5;
+}
+
+#resultadoOpcional {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#btnNueva:hover {
+  background-color: #4ad3057a;
+}
+#mensaje {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#opcional {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h1 {
+  color: #1d5203ce;
+  border: 1px solid #36bd04b5;
+  border-radius: 50px;
+  height: 50px;
+  padding: 1%;
+  line-height: 50px;
+}
+
+div {
+  color: #1d5203ce;
+}
+
+button:hover {
+  background-color: #4ad3057a;
+  color: #1d5203ce;
+}
+
+#btnNueva {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  border: 1px solid #36bd04b5;
+  border-radius: 50px;
+  background-color: rgba(144, 165, 42, 0.111);
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s;
+  font-weight: bold;
+  z-index: 0;
+  color: #1d5203ce;
+}
+
+#btnVerQueHubieraPasado {
+  color: #1d5203ce;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  border: 1px solid #36bd04b5;
+  border-radius: 50px;
+  background-color: rgba(144, 165, 42, 0.111);
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s;
+  font-weight: bold;
+  z-index: 0;
+  color: #1d5203ce;
+}
+
+button:hover:enabled {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+  background-color: rgba(144, 165, 42, 0.111);
+}
+
+button:disabled {
+  background-color: rgba(144, 165, 42, 0.111);
+  color: #999;
+  border: 2px solid #7cd96a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
+  opacity: 1;
+}
