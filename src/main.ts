@@ -63,7 +63,7 @@ const productos: LineaTicket[] = [
       precio: 2,
       tipoIva: "reducido",
     },
-    cantidad: 3,
+    cantidad: 30,
   },
   {
     producto: {
@@ -72,6 +72,14 @@ const productos: LineaTicket[] = [
       tipoIva: "general",
     },
     cantidad: 6,
+  },
+  {
+    producto: {
+      nombre: "Apio",
+      precio: 2,
+      tipoIva: "reducido",
+    },
+    cantidad: 1,
   },
   {
     producto: {
@@ -185,7 +193,7 @@ export const calculaTicket = (lineasTicket: LineaTicket[]): TicketFinal => {
       actualizaDesglose(
         ticket.desgloseIva,
         linea.producto.tipoIva,
-        ivaAplicado
+        parseFloat(ivaAplicado.toFixed(2))
       );
       ticket.lineas.push(creaLineaResultado(linea, precioSinIva, precioConIva));
       return ticket;
