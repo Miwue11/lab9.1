@@ -1,12 +1,10 @@
 import {
   calculaPrecios,
   calculaTicket,
-  LineaTicket,
   actualizaTotales,
-  ResultadoTotalTicket,
   actualizaDesglose,
-  TotalPorTipoIva,
 } from "./main";
+import { LineaTicket, ResultadoTotalTicket, TotalPorTipoIva } from "./modelo";
 
 describe("Calcula precios", () => {
   it("calcula precios correctamente", () => {

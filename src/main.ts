@@ -1,21 +1,12 @@
-export type TipoIva =
-  | "general"
-  | "reducido"
-  | "superreducidoA"
-  | "superreducidoB"
-  | "superreducidoC"
-  | "sinIva";
-
-export interface Producto {
-  nombre: string;
-  precio: number;
-  tipoIva: TipoIva;
-}
-
-export interface LineaTicket {
-  producto: Producto;
-  cantidad: number;
-}
+import { __TIPOSDEIVA } from "./constante";
+import {
+  LineaTicket,
+  ResultadoTotalTicket,
+  TotalPorTipoIva,
+  TipoIva,
+  ResultadoLineaTicket,
+  TicketFinal,
+} from "./modelo";
 
 const productos: LineaTicket[] = [
   {
@@ -139,40 +130,6 @@ const productos: LineaTicket[] = [
     cantidad: 1,
   },
 ];
-
-export interface ResultadoLineaTicket {
-  nombre: string;
-  cantidad: number;
-  precioSinIva: number;
-  tipoIva: TipoIva;
-  precioConIva: number;
-}
-
-export interface ResultadoTotalTicket {
-  totalSinIva: number;
-  totalConIva: number;
-  totalIva: number;
-}
-
-export interface TotalPorTipoIva {
-  tipoIva: TipoIva;
-  cuantia: number;
-}
-
-export interface TicketFinal {
-  lineas: ResultadoLineaTicket[];
-  total: ResultadoTotalTicket;
-  desgloseIva: TotalPorTipoIva[];
-}
-
-export const __TIPOSDEIVA = {
-  general: 0.21,
-  reducido: 0.1,
-  superreducidoA: 0.05,
-  superreducidoB: 0.04,
-  superreducidoC: 0.0,
-  sinIva: 0,
-};
 
 export const calculaPrecios = (linea: LineaTicket) => {
   const rate = __TIPOSDEIVA[linea.producto.tipoIva];
